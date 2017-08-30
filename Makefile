@@ -7,7 +7,7 @@ LDFLAGS		:= -framework SDL2 -Wall -O2 -std=c++11
 SOURCE		:= main.cpp graphics.cpp
 LIBS 		:= graphics.h
 
-SOURCEROOT	:= /Users/dchernyshev/Documents/code/game
+SOURCEROOT	:= /Users/dchernyshev/Documents/code/glowing-waddle
 SOURCEDIR	:= $(addprefix $(SOURCEROOT)/, Src)
 LIBSDIR		:= $(addprefix $(SOURCEROOT)/, Headers)
 #PATH_S		:= $(addprefix $(SOURCEDIR)/, $(SOURCE))

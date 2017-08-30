@@ -1,14 +1,7 @@
-#include <SDL2/SDL.h>
-
-#include "graphics.h"
-
-const int SCREEN_WIDTH = 640;
-const int SCREEN_HEIGHT = 480;
+#include "game.h"
 
 int main(int argc, char *argv[]) {
-	Graphics graphics;
-	while (true) {
-		
-	}
+	Game game;
+
 	return 0;
 }
