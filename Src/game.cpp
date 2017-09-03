@@ -21,6 +21,9 @@ void Game::GameLoop() {
 	SDL_Event event;
 	Input input;
 
+	this->_player = Sprite(&graphics, "Content/Sprites/slimeking.png", 0, 0, 48, 48, 100, 100);
+
+
 	int LAST_UPDATE_TIME_MS = SDL_GetTicks();
 
 	while (true) {
@@ -47,11 +50,17 @@ void Game::GameLoop() {
 		this->update(std::min(ELAPSEDTIME_MS, MAX_FRAME_TIME));
 
 		LAST_UPDATE_TIME_MS = CURRENT_TIME_MS;
+
+		this->draw(graphics);
 	}
 }
 
 void Game::draw(Graphics &graphics) {
+	graphics.clear();
 
+	this->_player.draw(graphics, 100, 100);
+
+	graphics.flip();
 } 
 
 void Game::update(double elapsedtime) {

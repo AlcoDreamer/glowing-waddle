@@ -2,7 +2,7 @@ TARGET		:= yasya
 
 CC			:= g++
 CFLAGS		:= -Wall -O2 -std=c++11
-LDFLAGS		:= -framework SDL2 -Wall -O2 -std=c++11
+LDFLAGS		:= -framework SDL2 -framework SDL2_image -Wall -O2 -std=c++11
 
 SOURCE		:= main.cpp graphics.cpp
 LIBS 		:= graphics.h
