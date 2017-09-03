@@ -2,7 +2,7 @@
 
 #define GAME_H
 
-#include "sprite.h"
+#include "animatedsprite.h"
 
 class Graphics;
 
@@ -13,10 +13,10 @@ public:
 	~Game();
 private:
 	void GameLoop();
-	void draw(Graphics &graphics);
+	void draw(Graphics *graphics);
 	void update(double elapsedTime);
 
-	Sprite _player;
+	AnimatedSprite _player;
 };
 
 #endif
