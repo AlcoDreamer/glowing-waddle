@@ -39,8 +39,40 @@ void Game::GameLoop() {
 				return;
 			}
 		}
+
 		if (input.wasKeyPressed(SDL_SCANCODE_ESCAPE) == true) {
 			return;
+		}
+
+		int vertical = 0, horizontal = 0;
+		if (input.isKeyHeld(SDL_SCANCODE_UP) == true) {
+			vertical -= 1;
+		}
+		if (input.isKeyHeld(SDL_SCANCODE_DOWN) == true) {
+			vertical += 1;
+		}
+
+		if (input.isKeyHeld(SDL_SCANCODE_LEFT) == true) {
+			horizontal -= 1;
+		}
+		if (input.isKeyHeld(SDL_SCANCODE_RIGHT) == true) {
+			horizontal += 1;
+		}
+		
+		if (vertical != 0 && horizontal == 0) {
+			if (vertical == 1) {
+				this->_player.moveDown();
+			} else {
+				this->_player.moveUp();
+			}
+		} else if (vertical == 0 && horizontal != 0) {
+			if (horizontal == 1) {
+				this->_player.moveRight();
+			} else {
+				this->_player.moveLeft();
+			}
+		} else {
+			this->_player.stopMoving();
 		}
 
 		const int CURRENT_TIME_MS = SDL_GetTicks();

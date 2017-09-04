@@ -1,8 +1,8 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-#include <string>
 #include <animatedsprite.h>
+#include <global.h>
 
 class Graphics;
 
@@ -13,10 +13,18 @@ public:
 	void draw(Graphics *graphics);
 	void update(double elapsedTime);
 
+	void moveUp();
+	void moveLeft();
+	void moveRight();
+	void moveDown();
+	void stopMoving();
+
 	virtual void animationDone(std::string currentAnimation);
 	virtual void setupAnimations();
 private:
+	double _dx, _dy;
 
+	Direction _facing;
 };
 
 #endif

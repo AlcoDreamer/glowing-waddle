@@ -16,7 +16,7 @@ AnimatedSprite::AnimatedSprite(Graphics *graphics, const std::string &filePath,
 void AnimatedSprite::addAnimation(int frames, int x, int y, std::string name, int widht, int height, Vector2 offset) {
 	std::vector < SDL_Rect > rectangles;
 	for (int i = 0; i < frames; ++i) {
-		SDL_Rect newRect = { (i + x) * widht, y, widht, height };
+		SDL_Rect newRect = { (i + x) * widht, y * height, widht, height };
 		rectangles.push_back(newRect);
 	}
 	this->_animations[name] = rectangles;

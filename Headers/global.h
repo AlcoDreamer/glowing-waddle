@@ -5,8 +5,16 @@ namespace global {
 	const int SCREEN_WIDTH = 640;
 	const int SCREEN_HEIGHT = 480;
 
-	const double SPRITE_SCALE = 0.5f;
+	const double SPRITE_SCALE = 1.0f;
 }
+
+enum Direction
+{
+	DOWN,
+	LEFT,
+	RIGHT,
+	UP
+};
 
 struct Vector2 {
 	int x, y;
