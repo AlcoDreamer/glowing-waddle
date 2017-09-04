@@ -21,9 +21,7 @@ void Game::GameLoop() {
 	SDL_Event event;
 	Input input;
 
-	this->_player = AnimatedSprite(&graphics, "Content/Sprites/slimeking.png", 0, 0, 48, 48, 100, 100, 100);
-	this->_player.setupAnimation();
-	this->_player.playAnimation("RunRight");
+	this->_player = Player(&graphics, 100, 100);
 	
 	int LAST_UPDATE_TIME_MS = SDL_GetTicks();
 
@@ -59,7 +57,7 @@ void Game::GameLoop() {
 void Game::draw(Graphics *graphics) {
 	graphics->clear();
 
-	this->_player.draw(graphics, 100, 100);
+	this->_player.draw(graphics);
 
 	graphics->flip();
 } 

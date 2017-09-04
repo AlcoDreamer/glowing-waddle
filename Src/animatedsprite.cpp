@@ -77,13 +77,12 @@ void AnimatedSprite::draw(Graphics *graphics, int x, int y) {
 	}
 }
 
-void AnimatedSprite::animationDone(std::string currentAnimation) {
-
-}
-
+/*
 void AnimatedSprite::setupAnimation() {
 	this->addAnimation(3, 0, 0, "RunUp", 48, 48, Vector2(0, 0));
 	this->addAnimation(3, 0, 48, "RunLeft", 48, 48, Vector2(0, 0));
 	this->addAnimation(3, 0, 48 * 2, "RunRight", 48, 48, Vector2(0, 0));
 	this->addAnimation(3, 0, 48 * 3, "RunDown", 48, 48, Vector2(0, 0));
 }
+
+*/

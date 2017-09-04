@@ -8,7 +8,7 @@
 #include "sprite.h"
 #include "global.h"
 
-class AnimatedSprite : Sprite {
+class AnimatedSprite : protected Sprite {
 public:
 	AnimatedSprite();
 	AnimatedSprite(Graphics *graphics, const std::string &filePath, int sourseX, int sourseY,
@@ -19,9 +19,7 @@ public:
 	void update(int elapsedTime);
 
 	void draw(Graphics *graphics, int x, int y);
-
-	virtual void setupAnimation();
-
+	
 protected:
 	double _timeToUpdated;
 	double _currentAnimationOnce;
@@ -38,7 +36,9 @@ protected:
 
 	void setVisible(bool _visible);
 
-	virtual void animationDone(std::string currentAnimation);
+	virtual void animationDone(std::string currentAnimation) = 0;
+
+	virtual void setupAnimations() = 0;
 
 private:
 	std::map < std::string, std::vector < SDL_Rect > > _animations;

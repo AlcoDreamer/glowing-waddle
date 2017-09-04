@@ -19,13 +19,13 @@ public:
 	virtual ~Sprite();
 	virtual void update();
 	void draw(Graphics &graphics, int x, int y);
-
 protected:
 	SDL_Rect _sourseRect;
 	SDL_Texture* _spriteSheet;
 
-private:
 	double _x, _y;
+
+private:
 };
 
 #endif
