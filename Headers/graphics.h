@@ -4,7 +4,11 @@
 /*
 * All information dealing with graphics for the game
 */
+
 #include <SDL2/SDL.h>
+//#include <SDL_image.h>
+#include <SDL2/SDL_image.h>
+//#include <SDL2_image/SDL_image.h>
 #include <map>
 #include <string>
 

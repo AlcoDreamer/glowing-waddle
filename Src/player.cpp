@@ -3,14 +3,13 @@
 
 namespace player_constant {
 	double WALK_SPEED = 0.2f;
-	std::string PATH_TO_CHAR = "Content/sprites/slimeking.png";
+	std::string PATH_TO_CHAR = "Content/Sprites/slimeking.png";
 }
 
 Player::Player() {};
 
 Player::Player(Graphics *graphics, double x, double y) : 
-	AnimatedSprite(graphics, player_constant::PATH_TO_CHAR, 0, 0, 48, 48, x, y, 100)
-{
+	AnimatedSprite(graphics, player_constant::PATH_TO_CHAR, 0, 0, 48, 48, x, y, 100) {
 	graphics->loadImage(player_constant::PATH_TO_CHAR);
 
 	this->setupAnimations();

@@ -1,6 +1,8 @@
 #ifndef GLOBAL_H
 #define GLOBAL_H
 
+#include <iostream>
+
 namespace global {
 	const int SCREEN_WIDTH = 640;
 	const int SCREEN_HEIGHT = 480;

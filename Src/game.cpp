@@ -1,6 +1,7 @@
 #include "game.h"
 #include "graphics.h"
 #include "input.h"
+#include <SDL2/SDL.h>
 
 namespace {
 	const int FPS = 50;

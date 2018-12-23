@@ -17,7 +17,7 @@ public:
 	Sprite();
 	Sprite(Graphics *graphics, const std::string &filePath, int sourseX, int SourseY, int width, int height, double posX, double posY);
 	virtual ~Sprite();
-	virtual void update();
+	virtual void update(double elapsedTime);
 	void draw(Graphics &graphics, int x, int y);
 protected:
 	SDL_Rect _sourseRect;

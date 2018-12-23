@@ -45,8 +45,8 @@ void AnimatedSprite::stopAnimation() {
 	this->animationDone(this->_currentAnimation);
 }
 
-void AnimatedSprite::update(int elapsedTime) {
-	Sprite::update();
+void AnimatedSprite::update(double elapsedTime) {
+	Sprite::update(elapsedTime);
 
 	this->_timeElapsed += elapsedTime;
 	if (this->_timeElapsed > this-> _timeToUpdated) {
@@ -72,7 +72,7 @@ void AnimatedSprite::draw(Graphics *graphics, int x, int y) {
 		destinationRectangle.h = this->_sourseRect.h * global::SPRITE_SCALE;
 				
 		SDL_Rect sourseRect = this->_animations[this->_currentAnimation][this->_frameIndex];
-	
+
 		graphics->blitSurface(this->_spriteSheet, &sourseRect, &destinationRectangle);
 	}
 }

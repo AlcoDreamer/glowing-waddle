@@ -2,12 +2,12 @@ TARGET		:= yasya
 
 CC			:= g++
 CFLAGS		:= -Wall -O2 -std=c++11
-LDFLAGS		:= -framework SDL2 -framework SDL2_image -Wall -O2 -std=c++11
+LDFLAGS		:= -I/Library/Frameworks/SDL2.framework/Headers -F/Library/Frameworks -framework SDL2 -framework SDL2_image -Wall -O2 -std=c++11
 
 SOURCE		:= main.cpp graphics.cpp
 LIBS 		:= graphics.h
 
-SOURCEROOT	:= /Users/dchernyshev/Documents/code/glowing-waddle
+SOURCEROOT	:= $(shell pwd)
 SOURCEDIR	:= $(addprefix $(SOURCEROOT)/, Src)
 LIBSDIR		:= $(addprefix $(SOURCEROOT)/, Headers)
 #PATH_S		:= $(addprefix $(SOURCEDIR)/, $(SOURCE))

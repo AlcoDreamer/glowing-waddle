@@ -29,4 +29,4 @@ void Sprite::draw(Graphics &graphics, int x, int y) {
 	graphics.blitSurface(this->_spriteSheet, &this->_sourseRect, &destinationRectangle);
 }
 
-void Sprite::update() {}
+void Sprite::update(double elapsedTime) {}
